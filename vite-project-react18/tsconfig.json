@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",   //src作为根目录,引入src下的文件,使用绝对路径即可
+    "paths": {
+      "@/*": ["./src/*"]  // 这里需要配置
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -16,6 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules"]
 }

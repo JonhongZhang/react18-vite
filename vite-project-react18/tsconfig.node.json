@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",   //src作为根目录,引入src下的文件,使用绝对路径即可
+
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
